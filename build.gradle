@@ -19,6 +19,5 @@ allprojects {
     }
 }
 
-task stage {
-    dependsOn installDist
-}
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
